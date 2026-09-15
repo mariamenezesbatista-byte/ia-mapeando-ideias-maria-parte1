@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Organizador de estudos da mavii</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header>
+    <h1>Organizador de estudos da mavii</h1>
+    <p>Protótipo de mapeamento de desafios e melhorias para estudantes</p>
+  </header>
+
+  <!-- Container dos Cards -->
+  <main class="container">
+
+    <!-- Card 1: Problema Real -->
+    <div class="card problemas">
+      <div>
+        <span class="tag problema-tag">Problema Real</span>
+        <h2>Procrastinação e Prazos</h2>
+        <p>A dificuldade constante em iniciar tarefas importantes, resultando no acúmulo de matérias na véspera da prova.</p>
+      </div>
+      <a href="#modal-1" class="btn-modal">Ver Detalhes</a>
+    </div>
+
+    <!-- Card 2: Incômodo -->
+    <div class="card incomodos">
+      <div>
+        <span class="tag incomodo-tag">Incômodo Diário</span>
+        <h2>Notificações & Redes</h2>
+        <p>Interrupções frequentes de mensagens e redes sociais que quebram o estado de foco e concentração.</p>
+      </div>
+      <a href="#modal-2" class="btn-modal">Ver Detalhes</a>
+    </div>
+
+    <!-- Card 3: Insatisfação -->
+    <div class="card insatisfacao">
+      <div>
+        <span class="tag insatisfacao-tag">Insatisfação</span>
+        <h2>Rotina Exaustiva</h2>
+        <p>A sensação de estudar por horas a fio, mas sentir que o rendimento não foi suficiente ou proporcional ao cansaço.</p>
+      </div>
+      <a href="#modal-3" class="btn-modal">Ver Detalhes</a>
+    </div>
+
+    <!-- Card 4: Problema Real -->
+    <div class="card problemas">
+      <div>
+        <span class="tag problema-tag">Problema Real</span>
+        <h2>Falta de Método de Estudo</h2>
+        <p>Estudar apenas lendo passivamente, sem resumos ativos, revisões espaçadas ou resolução de exercícios.</p>
+      </div>
+      <a href="#modal-4" class="btn-modal">Ver Detalhes</a>
+    </div>
+
+    <!-- Card 5: Incômodo -->
+    <div class="card incomodos">
+      <div>
+        <span class="tag incomodo-tag">Incômodo Diário</span>
+        <h2>Material Desorganizado</h2>
+        <p>Perda de tempo procurando anotações, PDFs, links ou cadernos espalhados em lugares diferentes.</p>
+      </div>
+      <a href="#modal-5" class="btn-modal">Ver Detalhes</a>
+    </div>
+
+    <!-- Card 6: Insatisfação -->
+    <div class="card insatisfacao">
+      <div>
+        <span class="tag insatisfacao-tag">Insatisfação</span>
+        <h2>Sobrecarga de Conteúdo</h2>
+        <p>Sensação constante de estar "atrás do prejuízo" devido à quantidade exagerada de matérias acumuladas.</p>
+      </div>
+      <a href="#modal-6" class="btn-modal">Ver Detalhes</a>
+    </div>
+
+  </main>
+
+  <!-- --- MODAIS (Janelas de Destaque) --- -->
+
+  <!-- Modal 1 -->
+  <div id="modal-1" class="modal-overlay">
+    <div class="modal-box">
+      <a href="#" class="btn-close">&times;</a>
+      <h3>Procrastinação e Prazos</h3>
+      <p>Estudantes tendem a adiar matérias mais difíceis, criando um ciclo de ansiedade à medida que os prazos das provas e entregas se aproximam.</p>
+      <div class="modal-solucao">
+        <strong>💡 Proposta de Funcionalidade no App:</strong> Sistema de metas diárias pequenas (Técnica Pomodoro) e alertas inteligentes.
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2 -->
+  <div id="modal-2" class="modal-overlay">
+    <div class="modal-box">
+      <a href="#" class="btn-close">&times;</a>
+      <h3>Notificações & Redes Sociais</h3>
+      <p>A troca constante de contexto reduz a retenção de aprendizado em até 40%. Voltar ao foco após olhar o celular leva em média 10 minutos.</p>
+      <div class="modal-solucao">
+        <strong>💡 Proposta de Funcionalidade no App:</strong> Modo "Foco Ativo" que bloqueia distrações ou gera cronômetros visuais.
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3 -->
+  <div id="modal-3" class="modal-overlay">
+    <div class="modal-box">
+      <a href="#" class="btn-close">&times;</a>
+      <h3>Sensação de Baixa Produtividade</h3>
+      <p>O desgaste mental sem o acompanhamento claro de progresso dá a falsa impressão de que o aluno "não aprendeu nada".</p>
+      <div class="modal-solucao">
+        <strong>💡 Proposta de Funcionalidade no App:</strong> Dashboard com gráficos sutis que mostram tarefas e matérias concluídas.
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 4 -->
+  <div id="modal-4" class="modal-overlay">
+    <div class="modal-box">
+      <a href="#" class="btn-close">&times;</a>
+      <h3>Falta de Estrutura/Método</h3>
+      <p>Muitos estudantes gastam energia decidindo *o que* estudar em vez de efetivamente *estudar*.</p>
+      <div class="modal-solucao">
+        <strong>💡 Proposta de Funcionalidade no App:</strong> Cronograma automático com base na prioridade e dificuldade das matérias.
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 5 -->
+  <div id="modal-5" class="modal-overlay">
+    <div class="modal-box">
+      <a href="#" class="btn-close">&times;</a>
+      <h3>Material Desorganizado</h3>
+      <p>A descentralização de conteúdos faz o estudante perder um tempo precioso que poderia ser utilizado para estudo prático.</p>
+      <div class="modal-solucao">
+        <strong>💡 Proposta de Funcionalidade no App:</strong> Centralizador de Links, Anexos e Notas organizado por disciplina.
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 6 -->
+  <div id="modal-6" class="modal-overlay">
+    <div class="modal-box">
+      <a href="#" class="btn-close">&times;</a>
+      <h3>Sobrecarga de Conteúdo</h3>
+      <p>Tentativa de absorver grandes quantidades de informação de uma só vez, gerando esgotamento mental e esquecimento rápido.</p>
+      <div class="modal-solucao">
+        <strong>💡 Proposta de Funcionalidade no App:</strong> Algoritmo de Repetição Espaçada (Flashcards / Revisões Automáticas).
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>Organizador de estudos da mavii &copy; Protótipo de Interface</p>
+  </footer>
+
+</body>
+</html>

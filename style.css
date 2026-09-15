@@ -1,0 +1,207 @@
+/* --- VARIÁVEIS DE CORES E ESTILOS --- */
+:root {
+  --bg-color: #f6f5fa;
+  --card-bg: #ffffff;
+  --primary: #9b87f5;        /* Lilás Suave / Destaque */
+  --primary-hover: #7E69AB;
+  --accent-pink: #fecdd3;    /* Rosa Pastel */
+  --accent-blue: #bae6fd;    /* Azul Pastel */
+  --accent-yellow: #fef08a;  /* Amarelo Pastel */
+  --text-dark: #2d3748;
+  --text-muted: #718096;
+  --shadow: 0 10px 25px -5px rgba(155, 135, 245, 0.15);
+  --radius: 16px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-dark);
+  padding: 2rem 1rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* --- CABEÇALHO --- */
+header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  color: var(--primary-hover);
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+/* --- GRID DE CARDS --- */
+.container {
+  width: 100%;
+  max-width: 1100px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 2px solid transparent;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px -5px rgba(155, 135, 245, 0.25);
+}
+
+/* Estilização por Categorias */
+.card.problemas { border-top: 6px solid #f43f5e; }
+.card.incomodos { border-top: 6px solid #06b6d4; }
+.card.insatisfacao { border-top: 6px solid #eab308; }
+
+.tag {
+  align-self: flex-start;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.tag.problema-tag { background-color: var(--accent-pink); color: #9f1239; }
+.tag.incomodo-tag { background-color: var(--accent-blue); color: #075985; }
+.tag.insatisfacao-tag { background-color: var(--accent-yellow); color: #854d0e; }
+
+.card h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+/* Botão de abrir modal */
+.btn-modal {
+  display: inline-block;
+  text-align: center;
+  background-color: var(--primary);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+
+.btn-modal:hover {
+  background-color: var(--primary-hover);
+}
+
+/* --- EFEITO MODAL COM CSS (:target) --- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(45, 55, 72, 0.4);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+/* Quando o ID do modal estiver na URL (:target) */
+.modal-overlay:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-box {
+  background: white;
+  padding: 2rem;
+  border-radius: var(--radius);
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  animation: modalUp 0.3s ease;
+}
+
+@keyframes modalUp {
+  from { transform: translateY(20px); }
+  to { transform: translateY(0); }
+}
+
+.modal-box h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: var(--primary-hover);
+}
+
+.modal-box p {
+  color: var(--text-dark);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.btn-close {
+  position: absolute;
+  top: 1rem;
+  right: 1.2rem;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--text-muted);
+}
+
+.btn-close:hover {
+  color: var(--text-dark);
+}
+
+.modal-solucao {
+  background-color: #f0fdf4;
+  border-left: 4px solid #22c55e;
+  padding: 0.8rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  color: #166534;
+}
+
+/* --- RODAPÉ --- */
+footer {
+  margin-top: 3rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
